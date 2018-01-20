@@ -3,6 +3,7 @@
 <head>
 	<title>Colors</title>
 	<link rel="stylesheet" type="text/css" href="circles.css">
+
 	<script type="text/javascript" src="paper-full.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.8/howler.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -10,7 +11,7 @@
 
 	swal({
 		title: "Welcome!",
-		text: "Press any key,A to Z,and turn up speakers",
+		text: "Press any key,A to Z,or press anywhere on the screen,and turn up speakers",
 		button:"Aww",
 });
 	
@@ -171,6 +172,7 @@
 		}),
 		color: '#2c3e50'
 	}
+}
 
 		
 
@@ -178,7 +180,7 @@
 
 	function onKeyDown(event) {
 		if(keyData[event.key]){
-			var maxPoint = new Point(view.size.width,view.size.height);
+			var maxPoint = new Point(view.size.width, 	view.size.height);
 			var randomPoint = Point.random();
 			var point = maxPoint * randomPoint;
 			var newCircle = new Path.Circle(point, 350);
@@ -202,6 +204,8 @@
 	</script>
 </head>
 <body>
+
 	<canvas id="myCanvas"></canvas>
+
 </body>
 </html>
